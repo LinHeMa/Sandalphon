@@ -30,7 +30,7 @@ const Item = styled.li<{ show: boolean }>`
   text-align: center;
   list-style: none;
   color: ${color.white};
-  background: ${color.secondary};
+  background: ${color.navListItemColor};
   padding: 3.5px 8px;
   border-radius: 4px;
   cursor: pointer;

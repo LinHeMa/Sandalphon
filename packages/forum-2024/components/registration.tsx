@@ -54,7 +54,7 @@ export default function Registration({
       <ContentBlock content={content} />
       <ButtonWrapper>
         <Link
-          href={'https://mirrormedia.oen.tw/events/2jgYL2nHeNCtgLOgE3e5eEz27MC'}
+          href={'https://mirrormedia.oen.tw/events/2mrbbCsS9M88wVip80debk3K0EG'}
           passHref
         >
           <ApplyButton>信用卡報名</ApplyButton>

@@ -59,9 +59,7 @@ const MenuList = styled.li`
   list-style: none;
 
   &:hover {
-    color: ${color.secondary};
-    text-decoration-line: underline;
-    text-underline-offset: 8px;
+    color: ${color.sidebarTextHover};
     text-decoration-thickness: 1px;
     transition: all 0.2s ease;
   }
@@ -74,7 +72,7 @@ const ToggleButton = styled.div<{ show: boolean }>`
   position: fixed;
   top: 12px;
   right: 12px;
-  background: rgba(0, 0, 0, 1);
+  background: ${color.sidebarToggleButton};
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;

@@ -1,10 +1,14 @@
 import {
   primaryColor,
   secondaryColor,
+  navListItemColor,
   backgroundColor,
   titleColor,
   textColor,
   borderColor,
+  sidebarToggleButton,
+  sidebarTextHover,
+  scrollToTopBtnBg,
 } from '~/config'
 
 const mediaSize = {
@@ -32,7 +36,11 @@ const color = {
   background: backgroundColor,
   primary: primaryColor,
   secondary: secondaryColor,
+  navListItemColor: navListItemColor,
   border: borderColor,
+  sidebarToggleButton: sidebarToggleButton,
+  sidebarTextHover: sidebarTextHover,
+  scrollToTopBtnBg: scrollToTopBtnBg,
   text: {
     title: titleColor,
     normal: textColor,

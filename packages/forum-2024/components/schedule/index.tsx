@@ -24,7 +24,7 @@ const RowContainer = styled.div`
   overflow: hidden;
 
   .row-motion:nth-child(even) {
-    background: ${color.primary};
+    background: ${color.secondary};
     border-radius: 20px 0px 0px 20px;
     margin-left: auto;
     border: 2px solid ${color.border};
@@ -32,7 +32,7 @@ const RowContainer = styled.div`
   }
 
   .row-motion:nth-child(odd) {
-    background: ${color.white};
+    background: ${color.primary};
     border-radius: 0px 20px 20px 0px;
     margin-right: auto;
     border: 2px solid ${color.border};

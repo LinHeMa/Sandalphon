@@ -8,7 +8,7 @@ const Button = styled.button`
   box-shadow: 1px 1px 3px 0px hsla(0, 0%, 0%, 0.15);
   width: 36px;
   height: 36px;
-  background: ${color.secondary};
+  background: ${color.scrollToTopBtnBg};
   position: fixed;
   top: calc(100vh - 100px);
   right: 28px;

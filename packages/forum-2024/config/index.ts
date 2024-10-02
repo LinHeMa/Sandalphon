@@ -16,7 +16,9 @@ const OG_IMAGE_URL: string = process.env.NEXT_PUBLIC_OG_IMAGE_URL || ''
 // Color 設定
 const primaryColor: string = process.env.NEXT_PUBLIC_PRIMARY_COLOR || '#E2FBFE'
 const secondaryColor: string =
-  process.env.NEXT_PUBLIC_SECONDARY_COLOR || '#ffffff'
+  process.env.NEXT_PUBLIC_SECONDARY_COLOR || '#E2FBFE'
+const navListItemColor: string =
+  process.env.NEXT_PUBLIC_NAV_LIST_ITEM_COLOR || '#ffffff'
 const backgroundColor: string = process.env.NEXT_PUBLIC_BG_COLOR || '#BBD4DA'
 const titleColor: string = process.env.NEXT_PUBLIC_TITLE_COLOR || '#000000'
 const textColor: string = process.env.NEXT_PUBLIC_TEXT_COLOR || '#000000'
@@ -25,6 +27,12 @@ const sideBarBgColor: string =
   process.env.NEXT_PUBLIC_SIDEBAR_BG_COLOR || 'rgba(11, 25, 48, 0.8)'
 const sideBarTextColor: string =
   process.env.NEXT_PUBLIC_SIDEBAR_TEXT_COLOR || 'rgba(182, 242, 255, 1)'
+const sidebarToggleButton: string =
+  process.env.NEXT_PUBLIC_SIDEBAR_TOGGLE_BTN_COLOR || 'rgba(182, 242, 255, 1)'
+const sidebarTextHover: string =
+  process.env.NEXT_PUBLIC_SIDEBAR_TEXT_HOVER_COLOR || 'rgba(182, 242, 255, 1)'
+const scrollToTopBtnBg: string =
+  process.env.NEXT_PUBLIC_SCROLL_TO_TOP_BTN_COLOR || 'rgba(182, 242, 255, 1)'
 
 // Background Image 專題背景底圖設定
 const bgImageURL: string = process.env.NEXT_PUBLIC_BG_IMAGE_URL || ''
@@ -82,7 +90,7 @@ export {
   SITE_URL,
   JSON_URL,
   primaryColor,
-  secondaryColor,
+  navListItemColor,
   backgroundColor,
   titleColor,
   textColor,
@@ -93,4 +101,8 @@ export {
   OG_DESC,
   OG_IMAGE_URL,
   bgImageURL,
+  secondaryColor,
+  sidebarToggleButton,
+  sidebarTextHover,
+  scrollToTopBtnBg,
 }

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { zIndex, color, breakpoint } from '~/styles/theme'
-import { ShareButton } from '@readr-media/share-button'
 import MirrorMediaIcon from '~/public/icon/mirror-media-icon.svg'
 import Sidebar from '~/components/sidebar'
 import NavLists from '~/components/layout/nav-lists'
+import SocialIcon from '../sidebar/media-icons'
 
 const HeaderWrapper = styled.div<{ isVisible: boolean }>`
   width: 100%;
@@ -29,16 +29,6 @@ const HeaderWrapper = styled.div<{ isVisible: boolean }>`
     height: 76px;
   }
 
-  /* @readr-media/share-button */
-  .share-button {
-    display: none;
-
-    ${breakpoint.md} {
-      display: block;
-      padding-top: 5px;
-    }
-  }
-
   .mirror-media-icon {
     width: 68px;
     height: 29px;
@@ -55,6 +45,15 @@ const Aside = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+`
+
+const SocialIconWrapper = styled.div`
+  display: none;
+
+  ${breakpoint.md} {
+    display: block;
+    padding-top: 5px;
+  }
 `
 
 export default function Header(): JSX.Element {
@@ -94,7 +93,9 @@ export default function Header(): JSX.Element {
       <Aside>
         <NavLists />
         <Sidebar />
-        <ShareButton />
+        <SocialIconWrapper>
+          <SocialIcon />
+        </SocialIconWrapper>
       </Aside>
     </HeaderWrapper>
   )
