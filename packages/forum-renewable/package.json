@@ -1,0 +1,37 @@
+{
+  "name": "forum-2024",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type": "tsc --noEmit",
+    "export": "NEXT_PUBLIC_ENV=prod next build && next export",
+    "deploy": "bash deploy.sh"
+  },
+  "dependencies": {
+    "@readr-media/react-image": "^2.1.3",
+    "@readr-media/share-button": "^1.0.3",
+    "axios": "^1.5.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "dayjs": "^1.11.9",
+    "framer-motion": "^10.16.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "styled-components": "^5.3.6",
+    "swiper": "^10.0.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
+    "@types/node": "18.11.9",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "18.0.8",
+    "@types/react-gtm-module": "^2.0.1",
+    "@types/styled-components": "^5.1.26",
+    "@types/youtube": "^0.0.50",
+    "typescript": "^5.2.2"
+  }
+}
