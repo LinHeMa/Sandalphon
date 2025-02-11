@@ -139,7 +139,6 @@ export default function RelatedPost({
             <SlideItem post={item} />
           </SwiperSlide>
         ))
-
   return (
     <Wrapper id="related-post">
       <h1>相關報導</h1>

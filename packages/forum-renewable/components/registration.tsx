@@ -59,12 +59,7 @@ export default function Registration({
         >
           <ApplyButton>信用卡報名</ApplyButton>
         </Link>
-        <Link
-          href={
-            'https://docs.google.com/forms/d/e/1FAIpQLSdiHhGS1GPXBzDdiwISiSELKnaDK5WmFSCA3MezGZV2DfJqsA/viewform'
-          }
-          passHref
-        >
+        <Link href={'https://forms.gle/UtxtrYi1zDBtVUno8'} passHref>
           <ApplyButton>匯款報名</ApplyButton>
         </Link>
       </ButtonWrapper>

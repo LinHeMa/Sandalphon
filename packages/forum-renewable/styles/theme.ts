@@ -41,13 +41,13 @@ const color = {
   sidebarToggleButton: sidebarToggleButton,
   sidebarTextHover: sidebarTextHover,
   scrollToTopBtnBg: scrollToTopBtnBg,
+  speakerName: '#2972E0',
   text: {
     title: titleColor,
     normal: textColor,
   },
   black: '#000000',
   white: '#ffffff',
-  gray: '#b3b3b3',
 }
 
 const zIndex = {

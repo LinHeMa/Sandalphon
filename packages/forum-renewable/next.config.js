@@ -2,6 +2,7 @@
 
 let assetPrefixPath = ''
 switch (process.env.NEXT_PUBLIC_ENV) {
+  // TODO: 修改
   case 'prod':
     assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
@@ -19,6 +20,7 @@ switch (process.env.NEXT_PUBLIC_ENV) {
 let basePath = ''
 
 switch (process.env.NEXT_PUBLIC_ENV) {
+  // TODO: 修改
   case 'prod':
     basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break

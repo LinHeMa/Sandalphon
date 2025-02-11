@@ -19,7 +19,7 @@ const TypeGroup = styled.div`
   }
 `
 const SpeakerType = styled.div`
-  color: ${color.gray};
+  color: ${color.speakerName};
   margin-bottom: 8px;
   font-size: 14px;
 `
