@@ -17,13 +17,16 @@ check-env:
 
 # 刪除舊的資料夾
 delete-old:
-	@echo "delete old '$(NEXT_PUBLIC_PROJECT_NAME)'..."
-	@if [ ! -d '$(NEXT_PUBLIC_PROJECT_NAME)' ]; then \
-		echo "Error: '$(NEXT_PUBLIC_PROJECT_NAME)' folder does not exist. Please run 'make build' first."; \
-		exit 1; \
+	@if [ -z "$(NEXT_PUBLIC_PROJECT_NAME)" ]; then \
+		echo "Skipping deletion as NEXT_PUBLIC_PROJECT_NAME is not set."; \
+	elif [ ! -d "$(NEXT_PUBLIC_PROJECT_NAME)" ]; then \
+		echo "Skipping deletion as '$(NEXT_PUBLIC_PROJECT_NAME)' folder does not exist."; \
+	else \
+		echo "Deleting old '$(NEXT_PUBLIC_PROJECT_NAME)'..."; \
+		rm -rf "$(NEXT_PUBLIC_PROJECT_NAME)"; \
+		echo "Successfully deleted '$(NEXT_PUBLIC_PROJECT_NAME)'."; \
 	fi
-	rm -rf "$(NEXT_PUBLIC_PROJECT_NAME)"
-	@echo "Successfully deleted '$(NEXT_PUBLIC_PROJECT_NAME)'."
+
 
 # build起來
 build:

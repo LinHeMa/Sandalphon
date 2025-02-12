@@ -12,6 +12,9 @@ switch (process.env.NEXT_PUBLIC_ENV) {
   case 'dev':
     assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
+  case 'localhost':
+    assetPrefixPath = `http://localhost:${process.env.NEXT_PUBLIC_PROJECT_HOST_PORT}`
+    break
   default:
     assetPrefixPath = ''
     break
@@ -29,6 +32,9 @@ switch (process.env.NEXT_PUBLIC_ENV) {
     break
   case 'dev':
     basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    break
+  case 'localhost':
+    basePath = ``
     break
   default:
     basePath = ''

@@ -116,6 +116,7 @@ export default function ForumVideo({
       <SwiperWrapper>
         <Swiper
           className="swipper-container"
+          // @ts-ignore
           slidesPerView={1}
           modules={[Pagination, Navigation, Mousewheel, Keyboard]}
           navigation={true}
@@ -125,6 +126,7 @@ export default function ForumVideo({
           keyboard={{
             enabled: true,
           }}
+          // @ts-ignore
           onSlideChange={(e) => setActiveVideoId(videoIds[e.realIndex])}
         >
           {videoIds.map((videoId) => (

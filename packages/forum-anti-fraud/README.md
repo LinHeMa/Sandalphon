@@ -13,6 +13,17 @@
 2. 使用 `yarn install` 安裝環境依賴。
 3. 接著，使用 `yarn dev` 啟動服務，進行開發測試。
 4. 開發完畢後，使用 `yarn build` 來建構正式環境程式，並使用 `yarn export` 生成 `out` 靜態專題資料夾，並將資料夾內的檔案們放上 GCS。
+5. 目前這個版本要使用localhost，必須在 `.env.local` 中設定 `NEXT_PUBLIC_PROJECT_HOST_PORT` ，並在 `next.config.js` 中設定 `assetPrefixPath` 為 `http://localhost:${NEXT_PUBLIC_PROJECT_HOST_PORT}`。basePath 為空字串。
+6. 如果遇到api 資料室CORS 問題，請在 `next.config.js` 中設定:
+   1. `dev` 環境`https://statics-dev.mnews.tw/json/${NEXT_PUBLIC_PROJECT_NAME}`
+   2. `prod` 環境`https://statics.mnews.tw/json/${NEXT_PUBLIC_PROJECT_NAME}`
+7. 每一次的build可以直接使用Makefile，會自動更改名字，並且提醒你環境變數是否正確，並且刪除舊的資料夾。(這裡會使用env的變數，所以要先設定env的變數)
+   - 總結：
+       1. 使用 `make all` 來執行所有指令。
+       2. 使用 `make build` 來建構正式環境程式，並使用 `make export` 生成 `out` 靜態專題資料夾，並將資料夾內的檔案們放上 GCS。
+       3. 使用 `make rename` 來重新命名資料夾。
+       4. 使用 `make delete-old` 來刪除舊的資料夾。
+       5. 使用 `make check-env` 來檢查環境變數是否正確。
 
 ## Project Directory Explanation (專案目錄結構說明)
 
