@@ -47,18 +47,18 @@ let SITE_URL = ''
 switch (env) {
   case 'dev':
     protocol = 'https'
-    host = 'events.mirrormedia.mg'
-    staticFileDestination = `${protocol}://${host}/events/${projectName}`
-    imagePrefix = `/events/${projectName}`
+    host = 'projects.mirrormedia.mg'
+    staticFileDestination = `${protocol}://${host}/projects/${projectName}`
+    imagePrefix = `/projects/${projectName}`
     GTM_ID = 'GTM-PBNLSMX'
     SITE_URL = 'dev-next.mirrormedia.mg'
 
     break
   case 'staging':
     protocol = 'https'
-    host = 'events.mirrormedia.mg'
-    staticFileDestination = `${protocol}://${host}/events/${projectName}`
-    imagePrefix = `/events/${projectName}`
+    host = 'projects.mirrormedia.mg'
+    staticFileDestination = `${protocol}://${host}/projects/${projectName}`
+    imagePrefix = `/projects/${projectName}`
     GTM_ID = 'GTM-KVDZ27K'
     SITE_URL = 'staging-next.mirrormedia.mg'
 
@@ -66,9 +66,9 @@ switch (env) {
 
   case 'prod': {
     protocol = 'https'
-    host = 'events.mirrormedia.mg'
-    staticFileDestination = `${protocol}://${host}/events/${projectName}`
-    imagePrefix = `/events/${projectName}`
+    host = 'projects.mirrormedia.mg'
+    staticFileDestination = `${protocol}://${host}/projects/${projectName}`
+    imagePrefix = `/projects/${projectName}`
     GTM_ID = 'GTM-NCH86SP'
     SITE_URL = 'www.mirrormedia.mg'
 
