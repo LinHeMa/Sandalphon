@@ -4,13 +4,13 @@ let assetPrefixPath = ''
 switch (process.env.NEXT_PUBLIC_ENV) {
   // TODO: 修改
   case 'prod':
-    assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    assetPrefixPath = `https://mnews.tw/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'staging':
-    assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    assetPrefixPath = `https://staging.mnews.tw/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'dev':
-    assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    assetPrefixPath = `https://dev.mnews.tw/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'localhost':
     assetPrefixPath = `http://localhost:${process.env.NEXT_PUBLIC_PROJECT_HOST_PORT}`
@@ -25,13 +25,13 @@ let basePath = ''
 switch (process.env.NEXT_PUBLIC_ENV) {
   // TODO: 修改
   case 'prod':
-    basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    basePath = `/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'staging':
-    basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    basePath = `/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'dev':
-    basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    basePath = `/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'localhost':
     basePath = ``

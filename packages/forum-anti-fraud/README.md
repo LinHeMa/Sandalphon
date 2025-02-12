@@ -17,6 +17,45 @@
 6. 如果遇到api 資料室CORS 問題，請在 `next.config.js` 中設定:
    1. `dev` 環境`https://statics-dev.mnews.tw/json/${NEXT_PUBLIC_PROJECT_NAME}`
    2. `prod` 環境`https://statics.mnews.tw/json/${NEXT_PUBLIC_PROJECT_NAME}`
+   3. 有兩個會根據GCS部署的不同而可能踩雷，請注意
+      1. 電視的:
+        ```javascript
+        // config/index.ts
+            protocol = 'https'
+            host = 'projects.mirrormedia.mg'
+            staticFileDestination = `${protocol}://${host}/projects/${projectName}`
+            imagePrefix = `/projects/${projectName}`
+            SITE_URL = 'dev-next.mirrormedia.mg'
+        // next.config.js
+            case 'dev':
+              assetPrefixPath = `https://dev.mnews.tw/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+              break
+
+            case 'dev':
+              basePath = `/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+              break
+        ```
+        2. 週刊的：
+        ```javascript
+        // config/index.ts
+              case 'dev':
+                protocol = 'https'
+                host = 'events.mirrormedia.mg'
+                staticFileDestination = `${protocol}://${host}/events/${projectName}`
+                imagePrefix = `/events/${projectName}`
+                SITE_URL = 'dev-next.mirrormedia.mg'
+
+                break
+        // next.config.js
+             case 'dev':
+              assetPrefixPath = `https://events.mirrormedia.mg/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+              break
+
+            case 'dev':
+              basePath = `/events/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+              break 
+        ```
+        3. 基本上就是記得config, next.config.js 兩個地方都要改（其他如果有缺漏的，在幫忙補在readme上減少後人通靈的次數。）
 7. 每一次的build可以直接使用Makefile，會自動更改名字，並且提醒你環境變數是否正確，並且刪除舊的資料夾。(這裡會使用env的變數，所以要先設定env的變數)
    - 總結：
        1. 使用 `make all` 來執行所有指令。
