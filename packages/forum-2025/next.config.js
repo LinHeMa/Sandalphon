@@ -3,7 +3,7 @@
 let assetPrefixPath = ''
 switch (process.env.NEXT_PUBLIC_ENV) {
   case 'prod':
-    assetPrefixPath = `https://dev.mirrormedia.mg/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
+    assetPrefixPath = `https://www.mirrormedia.mg/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
     break
   case 'staging':
     assetPrefixPath = `https://staging.mirrormedia.mg/projects/${process.env.NEXT_PUBLIC_PROJECT_NAME}`
