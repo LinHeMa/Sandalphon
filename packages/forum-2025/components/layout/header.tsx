@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { zIndex, color, breakpoint } from '~/styles/theme'
+import { zIndex, breakpoint } from '~/styles/theme'
 import MirrorMediaIcon from '~/public/icon/mirror-media-icon.svg'
 import Sidebar from '~/components/sidebar'
 import NavLists from '~/components/layout/nav-lists'
@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div<{ isVisible: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${color.background};
+  background: #01678a;
   z-index: ${zIndex.header};
 
   ${breakpoint.md} {

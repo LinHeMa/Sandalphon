@@ -73,7 +73,7 @@ const ToggleButton = styled.div<{ show: boolean }>`
   top: 12px;
   right: 12px;
   background: ${color.sidebarToggleButton};
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   align-items: center;

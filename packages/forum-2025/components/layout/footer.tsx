@@ -31,7 +31,7 @@ export default function Registration(): React.JSX.Element {
       <TextGroup>
         <p>精鏡傳媒股份有限公司 版權所有</p>
         <p>
-          Copyright © 2024 Mirror Media All rights reserved
+          Copyright © 2025 Mirror Media All rights reserved
           本網站圖文非經本社同意不得刊載
         </p>
       </TextGroup>
