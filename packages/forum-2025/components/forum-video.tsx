@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { JSX, useState } from 'react'
+import { useState } from 'react'
 import { useEffect, useId, useRef } from 'react'
 import { useYoutubePlayer } from '~/hook/use-youtube-player'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -100,7 +100,7 @@ function extractVideoId(url: string) {
 
 export default function ForumVideo({
   videoSrc = '',
-}: VideoProps): JSX.Element | null {
+}: VideoProps): React.JSX.Element | null {
   //Error Handle
   const videoUrls = videoSrc.split(',').filter((url) => url.trim() !== '')
   const videoIds = videoUrls.map(extractVideoId).filter((id) => id !== null)

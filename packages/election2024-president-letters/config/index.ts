@@ -33,7 +33,7 @@ switch (env) {
 
   case 'prod': {
     protocol = 'https'
-    host = 'www.mirrormedia.mg'
+    host = 'dev.mirrormedia.mg'
     staticFileDestination = `${protocol}://${host}/projects/${projectName}`
     imagePrefix = `/projects/${projectName}`
     GTM_ID = 'GTM-NCH86SP'
