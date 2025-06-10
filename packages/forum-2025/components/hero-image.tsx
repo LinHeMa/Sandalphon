@@ -56,7 +56,6 @@ export default function HeroImage({
     } else {
       setSelectedSrc(heroImageSrc.mobile)
     }
-    console.log({ selectedSrc })
   }, [windowDimensions, heroImageSrc])
 
   if (!selectedSrc) return <SkeletonLoading />

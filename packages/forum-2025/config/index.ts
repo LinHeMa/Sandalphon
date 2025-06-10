@@ -36,7 +36,6 @@ const scrollToTopBtnBg: string =
 
 // Background Image 專題背景底圖設定
 const bgImageURL: string = process.env.NEXT_PUBLIC_BG_IMAGE_URL || ''
-console.log({ bgImageURL })
 let protocol = 'http'
 let host = 'localhost'
 let staticFileDestination: string

@@ -95,6 +95,7 @@ function checkHaveSpeakers(speakerArray: RowSpeakerItem[]): boolean {
 }
 
 function removeEmptyLogo(logoList: LogoImage[] = []) {
+  if (!logoList) return []
   return logoList?.filter((item) => item.image.trim() !== '')
 }
 
