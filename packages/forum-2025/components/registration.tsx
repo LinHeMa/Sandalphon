@@ -54,14 +54,14 @@ export default function Registration({
       <ContentBlock content={content} />
       <ButtonWrapper>
         <Link
-          href={'https://mirrormedia.oen.tw/events/2mrbbCsS9M88wVip80debk3K0EG'}
+          href={'https://readr.oen.tw/events/2y7PRrsRFdVC4TRGJaE1A1AbtAG'}
           passHref
         >
           <ApplyButton>信用卡報名</ApplyButton>
         </Link>
         <Link
           href={
-            'https://docs.google.com/forms/d/e/1FAIpQLSdiHhGS1GPXBzDdiwISiSELKnaDK5WmFSCA3MezGZV2DfJqsA/viewform'
+            'https://docs.google.com/forms/d/e/1FAIpQLSdn_Ni185Os7EbObEi1M0Kw8x7kLp0WCiH1CzxV7wO8gjRiyQ/viewform?usp=dialog'
           }
           passHref
         >
